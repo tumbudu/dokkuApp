@@ -18,7 +18,7 @@ ENV GOPATH /gopath
 
 WORKDIR /gopath
 
-RUN git clone https://github.com/tumbudu/dokkuApp /gopath/src
+RUN git clone https://github.com/tumbudu/dokkuApp /gopath/src/dokkuApp
 
 RUN go build dokkuApp
 
