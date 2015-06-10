@@ -20,7 +20,7 @@ WORKDIR /gopath
 
 RUN git clone https://github.com/tumbudu/dokkuApp /gopath/src
 
-RUN go build app
+RUN go build dokkuApp
 
 # Document that the service listens on port 8080.
 EXPOSE 8080
