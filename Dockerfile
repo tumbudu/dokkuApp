@@ -12,6 +12,15 @@ FROM golang:1.4
 
 # Run the outyet command by default when the container starts.
 #ENTRYPOINT /go/bin/outyet
+FROM google/golang
+
+ENV GOPATH /gopath
+
+WORKDIR /gopath
+
+RUN git clone https://github.com/tumbudu/dokkuApp /gopath/src
+
+RUN go build app
 
 # Document that the service listens on port 8080.
 EXPOSE 8080
